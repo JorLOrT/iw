@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Estándar CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+<body>
+    <p>
+        CSS significa <strong>Cascading Style Sheets</strong> (Hojas de Estilo en Cascada).
+    </p>
+
+    <h2>CSS como estándar web</h2>
+    <p>
+        CSS es un <strong>estándar web</strong> porque es una tecnología definida y regulada por organismos internacionales 
+        como el <strong>W3C</strong>, lo que garantiza que funcione correctamente en todos los navegadores.
+    </p>
+    <p>
+        Esto significa que los desarrolladores pueden usar CSS para diseñar páginas web sabiendo que su apariencia será
+        consistente en diferentes dispositivos y plataformas.
+    </p>
+
+    <div class="caja">
+        <p>
+            Con CSS puedes cambiar colores, tamaños, fuentes, márgenes y la forma en que se ve una página web.
+        </p>
+    </div>
+
+    <h2>¿Para qué sirve?</h2>
+    <ul>
+        <li>Mejorar la apariencia de una página web</li>
+        <li>Separar el contenido (HTML) del diseño (CSS)</li>
+        <li>Hacer sitios web más atractivos y profesionales</li>
+    </ul>
+
+    <h2>Evolución de CSS (Versiones)</h2>
+    <p>
+        Desde su creación, CSS ha evolucionado en diferentes versiones para adaptarse a las necesidades de la web moderna:
+    </p>
+    <ul>
+        <li><strong>CSS1 (1996):</strong> La primera versión. Incluía propiedades básicas para fuentes, colores, alineación de texto y márgenes.</li>
+        <li><strong>CSS2 (1998):</strong> Introdujo el posicionamiento de elementos (absoluto, relativo, fijo), el índice Z (z-index), soporte para diferentes tipos de medios (pantallas, impresoras) y mayor control general sobre el diseño.</li>
+        <li><strong>CSS3 (1999 - Actualidad):</strong> Revolucionó el diseño web al dividirse en "módulos". Trajo características avanzadas como sombras, bordes redondeados, degradados, animaciones, transiciones y potentes sistemas de diseño como <strong>Flexbox</strong> y <strong>CSS Grid</strong>. Además, introdujo las <em>Media Queries</em>, las cuales son fundamentales para el diseño responsivo (adaptable a dispositivos móviles).</li>
+    </ul>
+
+    <h2>Ventajas de cumplir con el estándar CSS</h2>
+    <ul>
+        <li><strong>Accesibilidad:</strong> Facilita la lectura del documento a lectores de pantalla y a los motores de búsqueda al tener un HTML más semántico y limpio.</li>
+        <li><strong>Mantenimiento:</strong> Al separar el estilo, es mucho más fácil actualizar el diseño de un sitio web completo modificando una sola hoja de estilos.</li>
+        <li><strong>Rendimiento:</strong> Reduce la cantidad de código repetido en el HTML, resultando en archivos más livianos y tiempos de carga más rápidos.</li>
+    </ul>
+
+    <h2>CSS más allá de HTML</h2>
+    <p>
+        Aunque CSS se asocia comúnmente con HTML, es un lenguaje independiente de presentación que puede dar estilo a diversos tipos de documentos estructurados. Algunas de las otras tecnologías con las que funciona son:
+    </p>
+    <ul>
+        <li><strong>XML:</strong> Cualquier documento XML puro puede ser estilizado con CSS para mostrar visualmente su información estructurada.</li>
+        <li><strong>SVG (Gráficos Vectoriales Escalables):</strong> CSS es fundamental para dar color, aplicar estilos e incluso animar gráficos vectoriales e ilustraciones en la web.</li>
+        <li><strong>XUL y otras interfaces:</strong> Antiguamente usado para las interfaces de Firefox. Hoy en día, muchos frameworks para crear aplicaciones móviles y de escritorio (como React Native, Electron o GTK) adoptan motores basados en CSS para definir su diseño.</li>
+        <li><strong>EPUB:</strong> El formato estándar para libros electrónicos utiliza CSS para establecer la tipografía, los márgenes y el diseño de las páginas del libro.</li>
+    </ul>
+
+    <h2>Funciones en CSS</h2>
+    <p>
+        CSS no solo asigna valores estáticos, sino que también incluye <strong>funciones integradas</strong> que permiten calcular valores dinámicamente, manipular colores o aplicar efectos visuales. Algunas de las más utilizadas son:
+    </p>
+    <ul>
+        <li><strong>calc():</strong> Permite realizar operaciones matemáticas simples (sumas, restas, multiplicaciones, divisiones) para determinar el valor de una propiedad. <em>Ejemplo: <code>width: calc(100% - 50px);</code></em></li>
+        <li><strong>var():</strong> Se utiliza para llamar y aplicar el valor de una variable CSS personalizada (Custom Properties). <em>Ejemplo: <code>color: var(--color-principal);</code></em></li>
+        <li><strong>Funciones de color (rgb, rgba, hsl):</strong> Permiten definir colores mediante la mezcla de canales rojo, verde y azul, o por su matiz, saturación y luminosidad. <em>Ejemplo: <code>background-color: rgba(0, 0, 0, 0.5);</code></em></li>
+        <li><strong>url():</strong> Sirve para enlazar e importar recursos externos, como imágenes de fondo o fuentes tipográficas. <em>Ejemplo: <code>background-image: url('fondo.jpg');</code></em></li>
+        <li><strong>linear-gradient() y radial-gradient():</strong> Generan transiciones de color suaves y personalizables para usar como fondos, sin necesidad de cargar imágenes.</li>
+        <li><strong>Funciones de transformación (translate, rotate, scale):</strong> Se usan dentro de la propiedad <code>transform</code> para mover, rotar o cambiar el tamaño de un elemento, muy útiles para animaciones.</li>
+    </ul>
+
+    <h2>Ejemplo</h2>
+    <p>
+        En este mismo documento, el diseño que ves (colores, espacios, fuente)
+        está controlado por CSS dentro de la etiqueta &lt;style&gt;.
+    </p>
+
+    <h2>Editor CSS:</h2>
+    <pre>
+        <style
+        contenteditable
+        style="display: block"
+        >
+        body {
+            background-color: white;
+            color: black;
+            font-size: 15px;
+        }
+        h1 {
+            color: black;
+            font-size: 2em;
+        }
+        h2 {
+            color: black;
+            font-size: 1.5em;
+        }
+        p {
+            color: black;
+            font-size: 15px;
+        }
+        </style>
+    </pre>
+    
+
+</body>
+</html>
