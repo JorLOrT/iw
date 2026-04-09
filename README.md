@@ -2,6 +2,7 @@
 
 | Fecha | ID del Commit | Comentario del Commit |
 |-------|---------------|-----------------------|
+|   08/04/2026    | e359f6f   | Actualizando con los laboratorios realizados.                      |
 |   29/03/2026    | f5dee96   | Creación del repositorio y creación del README.md                      |
 
 # Repositorio Personal - Ingeniería Web

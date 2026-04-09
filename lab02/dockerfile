@@ -1,14 +1,12 @@
-# 1. Utilizar imagen ubuntu:24.04 (Cumple requerimiento)
+# 1. Utilizar imagen ubuntu:24.04
 FROM ubuntu:24.04
 
-# Evitar prompts interactivos durante la instalación
 ENV DEBIAN_FRONTEND=noninteractive
 
-# 2. Instalar Apache HTTP Server 2.x (Cumple requerimiento)
+# 2. Instalar Apache HTTP Server 2.x 
 RUN apt-get update && apt-get install -y apache2 && apt-get clean
 
-# 3. Copiar las carpetas del proyecto al contenedor (Usa tus archivos index.html reales)
-# Esto cumple el requerimiento de crear los archivos index.html, ya que los copias de tu host.
+# 3. Copiar las carpetas del proyecto al contenedor
 COPY administrativos /webapps/iw/lab02/administrativos
 COPY alumnos /webapps/iw/lab02/alumnos
 COPY profesores /webapps/iw/lab02/profesores
@@ -16,15 +14,13 @@ COPY profesores /webapps/iw/lab02/profesores
 # Asegurar permisos correctos para los archivos copiados
 RUN chown -R www-data:www-data /var/www/html/
 
-# 4. Copiar la configuración de los 3 Virtual Hosts y 3 Alias (Cumple requerimientos 3 y 4)
+# 4. Copiar la configuración de los 3 Virtual Hosts y 3 Alias
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
 # Habilitar el módulo de Alias y la configuración modificada
 RUN a2enmod alias
 
-# Exponer el puerto 80 (aunque no es obligatorio, es buena práctica)
 EXPOSE 80
 
-# 5. Automatizar el inicio del servidor web y mostrar el proceso en consola (Cumple requerimientos 5 y 7)
-# Ejecutar Apache en primer plano (FOREGROUND) para que el contenedor no se detenga.
+# 5. Automatizar el inicio del servidor web y mostrar el proceso en consola
 CMD ["apachectl", "-D", "FOREGROUND"]
